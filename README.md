@@ -22,18 +22,18 @@ This is a RESTFul API for displaying data from a SQLlite database. It supports U
 
 1. Clone the repo
    ```bash
-   git clone ...
-   cd ...
+   git clone https://github.com/Cyber-Freak999/HNG_Task_2.git
+   cd HNG_Task_2
    ```
 2. Create and setup virtual environment
    ```bash
-   pip install virtualenv
-   virtualenv env
-   env\scripts\activate.bat # in macOS ...
+   pip install virtualenv # in MacOS "python3 -m pip install --user virtualenv"
+   virtualenv env # in MacOS "virtualenv -p python3 env"
+   env\scripts\activate.bat # in macOS "source ./env/bin/activate"
    ```
 3. Install dependencies
    ```bash
-   pip install -r requirements.txt
+   pip install -r requirements.txt # in MacOS "python3 -m pip install requirements.txt"
    ```
 4. Run the application
    ```bash
