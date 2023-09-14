@@ -13,6 +13,7 @@ This documentation provides information on how to use the API, including details
   - [Update a Person by Name](#update-a-person-by-name)
   - [Delete a Person by Name](#delete-a-person-by-name)
   - [Create a Person by Name](#create-a-person-by-name)
+  - [Get all Person objects](#Get all Person objects)
 - [Request and Response Formats](#request-and-response-formats)
   - [Person Object](#person-object)
   - [Error Response](#error-response)
@@ -160,6 +161,22 @@ This documentation provides information on how to use the API, including details
   }
   ```
 
+### Get all Person objects
+
+- **Endpoint:** `GET /api/persons`
+- **Description:** Retrieve all Persons objects from the database.
+- **Response Format:**
+  - Body:
+  ```json
+  {
+    {
+        "id": 1,
+        "name": "John Doe"
+    }
+    ...
+  }
+  ```
+
 ## Request and Response Formats
 
 ### Person Object
@@ -180,6 +197,14 @@ In case of an error, the API returns an error response with the following format
     "message": "Name is required"
   }
   ```
+
+## UML DIAGRAM
+
+<p align="center">
+  <img src="./Test.png" />
+</p>
+
+This diagram represents the class structure and relationships in the API.
 
 ---
 
