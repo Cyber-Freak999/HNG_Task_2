@@ -62,7 +62,7 @@ The API is expected to be able to perform CRUD operations on a resource. It also
 **Request:**
 
 ```http
-POST /api/persons
+POST /api/
 Content-Type: application/json
 
 {
