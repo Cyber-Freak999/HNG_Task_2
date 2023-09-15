@@ -51,7 +51,8 @@ def create_person_by_name(name):
 # Get a person by ID
 @app.route('/api/<int:id>', methods=['GET'])
 def get_person(id):
-    person = Person.query.get(id)
+    person = db.session.get(Person, id)
+    
 
     if not person:
         return jsonify({'message': 'Person not found'}), 404
@@ -87,7 +88,7 @@ def update_person(id):
     if not name:
         return jsonify({'message': 'Name is required'}), 400
 
-    person = db.session.get(id)
+    person = db.session.get(Person, id)
 
     if not person:
         return jsonify({'message': 'Person not found'}), 404
@@ -123,7 +124,7 @@ def update_person_by_name(name):
 # Delete a person by ID
 @app.route('/api/<int:id>', methods=['DELETE'])
 def delete_person(id):
-    person = Person.query.get(id)
+    person = db.session.get(Person, id)
 
     if not person:
         return jsonify({'message': 'Person not found'}), 404
